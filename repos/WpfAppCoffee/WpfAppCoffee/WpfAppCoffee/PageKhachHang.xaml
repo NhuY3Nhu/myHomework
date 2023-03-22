@@ -1,0 +1,63 @@
+﻿<Window x:Class="WpfAppCoffee.PageKhachHang"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppCoffee"
+        mc:Ignorable="d"
+       
+        Title="Khách Hàng" Height="450" Width="800">
+    <Grid>
+        
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#E07DDC" Offset="1"/>
+                <GradientStop Color="#18D8BD" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <materialDesign:Card Grid.Row="0" Margin="5">
+                <WrapPanel Margin="0 0 0 10">
+                    <TextBox x:Name="txt_mkh" Text="{Binding MaKhachHang, UpdateSourceTrigger=PropertyChanged}"  Margin="5 5 15 5" materialDesign:HintAssist.Hint="Mã khách hàng"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox x:Name="txt_tkh" Text="{Binding TenKhachHang, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tên khách hàng" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox x:Name="txt_dt"  Text="{Binding SoDienThoai, UpdateSourceTrigger=PropertyChanged}"  Margin="5 5 15 5" materialDesign:HintAssist.Hint="Điện thoại"     Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox x:Name="txt_dc"  Text="{Binding DiaChi, UpdateSourceTrigger=PropertyChanged}"       Margin="5 5 15 5" materialDesign:HintAssist.Hint="Địa chỉ"        Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </WrapPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Row="1" Margin="5">
+                <WrapPanel>
+                    <Button Content="Thêm"     Margin="5" Width="100" Click="BtThem_Click" ></Button>
+                    <Button Content="Cập Nhật" Margin="5" Width="100" Click="BtCapNhat_Click"></Button>
+                    <Button Content="Xóa"      Margin="5" Width="100" Click="BtXoa_Click"></Button>
+                </WrapPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Row="2" Margin="5" VerticalAlignment="Stretch">
+                <Grid Grid.Row="3">
+                    <DataGrid x:Name="KhachHang" AutoGenerateColumns="False" Margin="10" SelectionChanged="KhachHang_SelectionChanged" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID"             Width="Auto" Binding="{Binding MaKhachHang}" />
+                            <DataGridTextColumn Header="Tên khách hàng" Width="Auto" Binding="{Binding TenKhachHang}"/>
+                            <DataGridTextColumn Header="Điện thoại"     Width="Auto" Binding="{Binding SoDienThoai}" />
+                            <DataGridTextColumn Header="Địa chỉ"        Width="Auto" Binding="{Binding DiaChi}"      />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </materialDesign:Card>
+        </Grid>
+    </Grid>
+</Window>

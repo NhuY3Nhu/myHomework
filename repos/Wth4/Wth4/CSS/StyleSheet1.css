@@ -1,0 +1,8 @@
+﻿body {
+}
+
+#form1 {
+    height: auto;
+    background-color: lightpink;
+    background-image: linear-gradient(pink, aqua);
+}

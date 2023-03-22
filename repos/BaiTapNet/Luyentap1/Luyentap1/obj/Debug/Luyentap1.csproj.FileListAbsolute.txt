@@ -1,0 +1,7 @@
+C:\Users\NHU Y\source\repos\BaiTapNet\Luyentap1\Luyentap1\bin\Debug\Luyentap1.exe.config
+C:\Users\NHU Y\source\repos\BaiTapNet\Luyentap1\Luyentap1\bin\Debug\Luyentap1.exe
+C:\Users\NHU Y\source\repos\BaiTapNet\Luyentap1\Luyentap1\bin\Debug\Luyentap1.pdb
+C:\Users\NHU Y\source\repos\BaiTapNet\Luyentap1\Luyentap1\obj\Debug\Luyentap1.csproj.AssemblyReference.cache
+C:\Users\NHU Y\source\repos\BaiTapNet\Luyentap1\Luyentap1\obj\Debug\Luyentap1.csproj.CoreCompileInputs.cache
+C:\Users\NHU Y\source\repos\BaiTapNet\Luyentap1\Luyentap1\obj\Debug\Luyentap1.exe
+C:\Users\NHU Y\source\repos\BaiTapNet\Luyentap1\Luyentap1\obj\Debug\Luyentap1.pdb
